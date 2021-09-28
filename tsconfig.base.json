@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@wyers/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@wyers/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@wyers/locations": ["libs/locations/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -66,6 +66,39 @@
         }
       }
     },
+    "locations": {
+      "root": "libs/locations",
+      "sourceRoot": "libs/locations/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/locations/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/locations"],
+          "options": {
+            "jestConfig": "libs/locations/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/locations",
+            "tsConfig": "libs/locations/tsconfig.lib.json",
+            "packageJson": "libs/locations/package.json",
+            "main": "libs/locations/src/index.ts",
+            "assets": ["libs/locations/*.md"]
+          }
+        }
+      }
+    },
     "wdev": {
       "projectType": "application",
       "root": "apps/wdev",
