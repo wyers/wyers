@@ -90,11 +90,12 @@
           "builder": "@nrwl/node:package",
           "outputs": ["{options.outputPath}"],
           "options": {
+            "optimization": true,
             "outputPath": "dist/libs/locations",
             "tsConfig": "libs/locations/tsconfig.lib.json",
             "packageJson": "libs/locations/package.json",
             "main": "libs/locations/src/index.ts",
-            "assets": ["libs/locations/*.md"]
+            "assets": ["libs/locations/*.md","libs/locations/.npmignore"]
           }
         }
       }
