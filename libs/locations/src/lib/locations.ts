@@ -1,3 +1,5 @@
-export function locations(): string {
-  return 'locations';
+export class Locations {
+  hello(): string {
+    return 'hey there';
+  }
 }

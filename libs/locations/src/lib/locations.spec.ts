@@ -1,7 +1,7 @@
-import { locations } from './locations';
+import {Locations} from './locations';
 
-describe('locations', () => {
+describe('Locations', () => {
   it('should work', () => {
-    expect(locations()).toEqual('locations');
+    expect(Locations).toBeTruthy();
   });
 });
